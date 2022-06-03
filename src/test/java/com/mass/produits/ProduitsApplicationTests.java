@@ -9,12 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.mass.produits.entities.Produit;
-import com.mass.produits.repository.produitRepository;
+import com.mass.produits.repository.ProduitRepository;
 
 @SpringBootTest
 class ProduitsApplicationTests {
 	@Autowired
-	private produitRepository produitRepository;
+	private ProduitRepository produitRepository;
 	
 	@Test
 	public void testCreateProduit() {
