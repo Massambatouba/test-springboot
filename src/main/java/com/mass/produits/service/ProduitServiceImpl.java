@@ -13,6 +13,7 @@ public class ProduitServiceImpl implements ProduitService {
 	
 	@Autowired
      ProduitRepository produitRepository;
+
 	@Override
 	public Produit saveProduit(Produit p) {
 		
@@ -21,7 +22,6 @@ public class ProduitServiceImpl implements ProduitService {
 
 	@Override
 	public Produit updateProduit(Produit p) {
-		
 		return produitRepository.save(p);
 	}
 
@@ -39,6 +39,7 @@ public class ProduitServiceImpl implements ProduitService {
 
 	@Override
 	public Produit getProduit(Long id) {
+		// TODO Auto-generated method stub
 		return produitRepository.findById(id).get();
 	}
 
@@ -47,5 +48,6 @@ public class ProduitServiceImpl implements ProduitService {
 		
 		return produitRepository.findAll();
 	}
+
 
 } 
