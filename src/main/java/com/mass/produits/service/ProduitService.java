@@ -2,6 +2,7 @@ package com.mass.produits.service;
 
 import java.util.List;
 
+import com.mass.produits.entities.Category;
 import com.mass.produits.entities.Produit;
 
 public interface ProduitService {
@@ -11,6 +12,14 @@ public interface ProduitService {
 	void deleteProduitById(Long id);
 	Produit getProduit(Long id);
 	List<Produit> getAllProduit();
+	List<Produit> getAllProduits();
+	List<Produit> findByNomProduit(String nom);
+	List<Produit> findByNomProduitContains(String nom);
+	List<Produit> findByNomPrix (String nom, Double prix);
+	List<Produit> findByCategorie (Category category);
+	List<Produit> findByCategorieIdCat(Long id);
+	List<Produit> findByOrderByNomProduitAsc();
+	List<Produit> trierProduitsNomsPrix();
 	
 	
 
